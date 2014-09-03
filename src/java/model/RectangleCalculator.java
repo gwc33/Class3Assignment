@@ -13,8 +13,13 @@ package model;
 public class RectangleCalculator {
     
     public String calculateArea(String length, String width){
+        try {
         double area = Double.parseDouble(length)*Double.parseDouble(width);
         return "" + area;
+        } 
+        catch(NumberFormatException nfe) {
+            return "Number was non-numeric";
+        }
     }
     
 }
